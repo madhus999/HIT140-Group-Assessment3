@@ -35,6 +35,18 @@ squad_age_diff     1.58
 top5_share_diff    3.38
 wc_exp_diff        3.14
 
+Pearson correlation with goal_diff and its p-value (EDA):
+                 pearson_r  p_value
+variable                           
+elo_diff            0.6017   0.0000
+h2h_score_rate      0.3165   0.0011
+rest_days_diff      0.0952   0.3366
+form_gd_diff        0.5088   0.0000
+host_adv_diff       0.1646   0.0951
+squad_age_diff     -0.0673   0.4974
+top5_share_diff     0.5750   0.0000
+wc_exp_diff         0.5227   0.0000
+
 ======================================================================
 3. FULL MODEL (OLS, all 104 matches)
 ======================================================================
@@ -44,7 +56,7 @@ Dep. Variable:              goal_diff   R-squared:                       0.471
 Model:                            OLS   Adj. R-squared:                  0.427
 Method:                 Least Squares   F-statistic:                     10.58
 Date:                Sat, 10 Oct 2026   Prob (F-statistic):           1.62e-10
-Time:                        14:49:15   Log-Likelihood:                -186.73
+Time:                        15:20:56   Log-Likelihood:                -186.73
 No. Observations:                 104   AIC:                             391.5
 Df Residuals:                      95   BIC:                             415.3
 Df Model:                           8                                         
@@ -131,3 +143,18 @@ CV baseline (mean)   -0.017  2.021  1.563
 Adjusted R-squared (all 104): 0.427
 F-test of the whole model: F = 10.58, p = 1.62e-10
 Correct winner on decided test matches: 94% (17 matches)
+
+======================================================================
+6. COMPETING ALGORITHMS (5-fold CV x10, lower RMSE is better)
+======================================================================
+                                        CV_R2  CV_RMSE  CV_MAE
+model                                                         
+Random forest                           0.413    1.534   1.220
+Gradient boosting                       0.386    1.569   1.252
+Linear regression (2 significant vars)  0.380    1.578   1.237
+Ridge regression                        0.363    1.600   1.262
+Lasso regression                        0.349    1.617   1.268
+Linear regression (8 vars)              0.340    1.628   1.278
+
+Baseline (always predict the mean): RMSE = 2.021
+Best model by cross-validated RMSE: Random forest

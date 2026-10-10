@@ -42,7 +42,7 @@ Two linear regression models on FIFA World Cup 2026 data, built in Python.
 
 Requires Python 3.10+.
 
-    pip install pandas numpy statsmodels matplotlib seaborn scipy
+    pip install pandas numpy statsmodels matplotlib seaborn scipy scikit-learn
     cd kb_model21
     python3 build_model21_dataset.py
     cd ../nabin_model21

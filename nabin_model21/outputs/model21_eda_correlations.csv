@@ -1,0 +1,9 @@
+variable,pearson_r,p_value
+elo_diff,0.6017,0.0
+h2h_score_rate,0.3165,0.0011
+rest_days_diff,0.0952,0.3366
+form_gd_diff,0.5088,0.0
+host_adv_diff,0.1646,0.0951
+squad_age_diff,-0.0673,0.4974
+top5_share_diff,0.575,0.0
+wc_exp_diff,0.5227,0.0

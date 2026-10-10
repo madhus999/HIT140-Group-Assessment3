@@ -4,7 +4,7 @@ Builds on KB's file `../kb_model21/model21_matches_KB.csv` (104 matches, target 
 
 ## How to run
 
-    pip install pandas numpy statsmodels matplotlib scipy
+    pip install pandas numpy statsmodels matplotlib scipy scikit-learn
     cd nabin_model21
     python build_model21_full_dataset.py    # writes model21_matches_full.csv + team_lookup.csv
     python model21_regression.py            # prints results, writes ./outputs
@@ -50,6 +50,38 @@ Adding the 4 new variables is a significant improvement over KB's 4 alone (parti
 | top5_share_diff | 2.060 | 0.003 | 0.005 | 3.38 |
 | wc_exp_diff | −0.017 | 0.564 | 0.619 | 3.14 |
 
+## Exploratory analysis (why these 8 variables)
+
+Variables were first chosen on football logic, then checked against the target with scatterplots (`outputs/fig4_eda_scatterplots.png`) and Pearson correlation.
+
+| variable | Pearson r with goal_diff | p-value |
+|---|---|---|
+| elo_diff | 0.60 | < 0.001 |
+| top5_share_diff | 0.58 | < 0.001 |
+| wc_exp_diff | 0.52 | < 0.001 |
+| form_gd_diff | 0.51 | < 0.001 |
+| h2h_score_rate | 0.32 | 0.001 |
+| host_adv_diff | 0.16 | 0.095 |
+| rest_days_diff | 0.10 | 0.337 |
+| squad_age_diff | −0.07 | 0.497 |
+
+Five variables are clearly related to goal difference on their own. `rest_days_diff` and `squad_age_diff` are not; they were kept because the brief requires exactly 8 and they carry different information from the strength variables (low VIF).
+
+## Competing algorithms
+
+Same 8 variables, same repeated 5-fold cross-validation (×10) for every model. Baseline (always predict the mean): RMSE 2.02.
+
+| model | CV R² | CV RMSE | CV MAE |
+|---|---|---|---|
+| Random forest | 0.413 | 1.534 | 1.220 |
+| Gradient boosting | 0.386 | 1.569 | 1.252 |
+| Linear regression (2 significant variables) | 0.380 | 1.578 | 1.237 |
+| Ridge regression | 0.363 | 1.600 | 1.262 |
+| Lasso regression | 0.349 | 1.617 | 1.268 |
+| Linear regression (8 variables) | 0.340 | 1.628 | 1.278 |
+
+All six models beat the baseline and sit within 0.1 goals of each other. The random forest is slightly best, and the 8-variable linear regression is last because six of its variables add noise rather than signal. Recommendation: linear regression remains the model to report because it is interpretable and the assignment requires it; the comparison shows a more flexible model gains only about 0.09 goals of accuracy.
+
 ## Assumption checks
 
 | assumption | check | result |
@@ -78,5 +110,5 @@ Model 2.1 uses the 8 variables above. Model 2.2 may share **at most 4** of them.
 - `model21_matches_full.csv` – final 104-row dataset
 - `team_lookup.csv` – per-team squad age, top-5 share, World Cup appearances
 - `model21_regression.py` – model, assumption checks, evaluation
-- `outputs/` – results text, coefficient tables, 3 figures
+- `outputs/` – results text, coefficient, EDA and model-comparison tables, 5 figures
 - `raw/` – squads and stadiums from openfootball/worldcup.json (2026)

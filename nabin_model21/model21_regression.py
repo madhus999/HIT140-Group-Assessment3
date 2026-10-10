@@ -5,14 +5,17 @@ Part: Nabin - build and evaluate the model
 Question : can information known before kick-off predict the goal difference
            (team1 goals - team2 goals at 90 minutes) of a World Cup 2026 match?
 Data     : model21_matches_full.csv  (104 matches, 8 explanatory variables)
-Method   : multiple linear regression (ordinary least squares) with statsmodels
+Method   : multiple linear regression (ordinary least squares) with statsmodels;
+           scikit-learn is used only for the competing algorithms in step 6
 
 Steps
   1. load data and describe it
-  2. check multicollinearity (correlation matrix + VIF)
+  2. exploratory analysis: scatterplots + Pearson correlation, then multicollinearity (VIF)
   3. fit the model on all 104 matches (coefficients, p-values, R-squared)
   4. check the regression assumptions on the residuals (robust errors if variance is unequal)
   5. evaluate prediction accuracy on unseen matches (train/test split + 5-fold CV)
+  6. compare linear regression with competing algorithms (ridge, lasso, random forest,
+     gradient boosting) using the same cross-validation
 
 Run: python model21_regression.py     -> prints results, saves files to ./outputs
 """
@@ -25,6 +28,10 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 from scipy import stats
+from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
+from sklearn.linear_model import LassoCV, LinearRegression, RidgeCV
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 from statsmodels.stats.diagnostic import het_breuschpagan, linear_reset
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from statsmodels.stats.stattools import durbin_watson
@@ -92,6 +99,30 @@ ax.set_title("Model 2.1 - correlation matrix")
 fig.tight_layout()
 fig.savefig(OUT / "fig1_correlation_matrix.png", dpi=200)
 plt.close(fig)
+
+# EDA: one scatterplot per explanatory variable against the target, with Pearson r and its p-value.
+# This is the evidence that each variable chosen on football logic really relates to goal difference.
+eda_rows = []
+fig, axes = plt.subplots(2, 4, figsize=(14, 6.5), sharey=True)
+for ax, col in zip(axes.ravel(), X_COLS):
+    r, p = stats.pearsonr(df[col], df[Y])
+    eda_rows.append({"variable": col, "pearson_r": r, "p_value": p})
+    ax.scatter(df[col], df[Y], alpha=0.6, s=18)
+    slope, intercept = np.polyfit(df[col], df[Y], 1)
+    xs = np.array([df[col].min(), df[col].max()])
+    ax.plot(xs, intercept + slope * xs, color="black", lw=1.2)
+    ax.set_title(f"{col}\nr = {r:.2f}, p = {p:.3f}", fontsize=10)
+    ax.set_xlabel(col)
+for ax in axes[:, 0]:
+    ax.set_ylabel("goal_diff")
+fig.suptitle("Model 2.1 - each explanatory variable against goal difference")
+fig.tight_layout()
+fig.savefig(OUT / "fig4_eda_scatterplots.png", dpi=200)
+plt.close(fig)
+eda = pd.DataFrame(eda_rows).set_index("variable")
+eda.round(4).to_csv(OUT / "model21_eda_correlations.csv")
+say("\nPearson correlation with goal_diff and its p-value (EDA):")
+say(eda.round(4).to_string())
 
 # ------------------------------------------------------------ 3. fit on all 104 matches
 model = sm.OLS(df[Y], X).fit()
@@ -243,6 +274,57 @@ ax.set(xlabel="Predicted goal difference", ylabel="Actual goal difference",
 ax.legend()
 fig.tight_layout()
 fig.savefig(OUT / "fig3_actual_vs_predicted.png", dpi=200)
+plt.close(fig)
+
+# ------------------------------------------------------------ 6. competing algorithms
+# Every model gets the same 8 variables and the same repeated 5-fold cross-validation as 5b,
+# so the scores are directly comparable. Ridge and lasso choose their penalty inside each
+# training fold only (no information from the held-out fold leaks in).
+SIG_COLS = ["elo_diff", "top5_share_diff"]          # the two variables significant with robust errors
+candidates = {
+    "Linear regression (8 vars)": (LinearRegression(), X_COLS),
+    "Linear regression (2 significant vars)": (LinearRegression(), SIG_COLS),
+    "Ridge regression": (make_pipeline(StandardScaler(), RidgeCV(alphas=np.logspace(-2, 3, 30))), X_COLS),
+    "Lasso regression": (make_pipeline(StandardScaler(), LassoCV(cv=5, random_state=SEED)), X_COLS),
+    "Random forest": (RandomForestRegressor(n_estimators=300, min_samples_leaf=3, random_state=SEED), X_COLS),
+    "Gradient boosting": (GradientBoostingRegressor(n_estimators=150, learning_rate=0.05, max_depth=2,
+                                                    random_state=SEED), X_COLS),
+}
+N_REP = 10
+comp_rows = []
+for name, (est, cols) in candidates.items():
+    rep_scores = []
+    for rep in range(N_REP):
+        folds = np.array_split(np.random.default_rng(SEED + rep).permutation(len(df)), 5)
+        pred = np.empty(len(df))
+        for k in range(5):
+            te = folds[k]
+            tr = np.concatenate([folds[j] for j in range(5) if j != k])
+            est.fit(df[cols].iloc[tr], df[Y].iloc[tr])
+            pred[te] = est.predict(df[cols].iloc[te])
+        rep_scores.append(metrics(df[Y], pred))
+    row = pd.DataFrame(rep_scores).mean()
+    comp_rows.append({"model": name, "CV_R2": row.R2, "CV_RMSE": row.RMSE, "CV_MAE": row.MAE})
+comp = pd.DataFrame(comp_rows).set_index("model").sort_values("CV_RMSE")
+comp.round(3).to_csv(OUT / "model21_model_comparison.csv")
+
+say("\n" + "=" * 70)
+say(f"6. COMPETING ALGORITHMS (5-fold CV x{N_REP}, lower RMSE is better)")
+say("=" * 70)
+say(comp.round(3).to_string())
+say(f"\nBaseline (always predict the mean): RMSE = {cv_base.RMSE:.3f}")
+say(f"Best model by cross-validated RMSE: {comp.index[0]}")
+
+fig, ax = plt.subplots(figsize=(7.5, 4))
+ax.barh(comp.index[::-1], comp.CV_RMSE[::-1])
+ax.axvline(cv_base.RMSE, color="black", ls="--", lw=1, label="baseline (predict the mean)")
+for i, v in enumerate(comp.CV_RMSE[::-1]):
+    ax.text(v + 0.01, i, f"{v:.2f}", va="center", fontsize=9)
+ax.set(xlabel="Cross-validated RMSE (goals)", title="Model 2.1 - competing algorithms",
+       xlim=(0, cv_base.RMSE * 1.15))
+ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.22), fontsize=8, frameon=False)
+fig.tight_layout()
+fig.savefig(OUT / "fig5_model_comparison.png", dpi=200)
 plt.close(fig)
 
 (OUT / "model21_results.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
