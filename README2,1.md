@@ -29,7 +29,12 @@ Two linear regression models on FIFA World Cup 2026 data, built in Python.
   - build_model21_dataset.py – builds the 104-row dataset
   - model21_matches_KB.csv – output dataset
   - README_model21_KB.md – data dictionary + notes
-- **nabin_model21/** – to be added
+- **nabin_model21/**
+  - build_model21_full_dataset.py – adds 4 more pre-match variables
+  - model21_matches_full.csv – final 104-row dataset (8 variables)
+  - model21_regression.py – OLS model, assumption checks, evaluation
+  - outputs/ – results, tables, figures
+  - README_model21_Nabin.md – variables, results, notes
 - **suman_model22/** – to be added
 - **prabin_model22/** – to be added
 
@@ -40,6 +45,9 @@ Requires Python 3.10+.
     pip install pandas numpy statsmodels matplotlib seaborn scipy
     cd kb_model21
     python3 build_model21_dataset.py
+    cd ../nabin_model21
+    python3 build_model21_full_dataset.py
+    python3 model21_regression.py
 
 ## Data sources
 
@@ -54,5 +62,8 @@ Requires Python 3.10+.
 | h2h_score_rate | ✅ | |
 | rest_days_diff | ✅ | |
 | form_gd_diff | ✅ | |
-| (Nabin adds 4 more) | ✅ | |
+| host_adv_diff | ✅ | |
+| squad_age_diff | ✅ | |
+| top5_share_diff | ✅ | |
+| wc_exp_diff | ✅ | |
 | (Suman adds 8) | | ✅ |
