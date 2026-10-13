@@ -19,7 +19,7 @@ Two linear regression models on FIFA World Cup 2026 data, built in Python.
 |---|---|---|---|
 | KB (Khadka Bohora) | <ID> | Model 2.1 dataset: 104 matches + 4 pre-match vars | kb_model21/ |
 | Nabin | <s297552> | Model 2.1: remaining 4 vars + regression | nabin_model21/ |
-| Suman | <ID> | Model 2.2 dataset: 208 team-match rows + 8 vars | suman_model22/ |
+| Suman Silwal | s397846 | Model 2.2 dataset: 208 team-match rows + 8 vars | suman_model22/ |
 | Prabin | <ID> | Model 2.2 regression, assumption checks, report | prabin_model22/ |
 
 ## Repository structure
@@ -35,7 +35,11 @@ Two linear regression models on FIFA World Cup 2026 data, built in Python.
   - model21_regression.py – OLS model, assumption checks, evaluation
   - outputs/ – results, tables, figures
   - README_model21_Nabin.md – variables, results, notes
-- **suman_model22/** – to be added
+- **suman_model22/**
+  - build_model22_dataset.py – builds the 208-row team-match dataset (reads kb/nabin raw/)
+  - model22_team_matches.csv – output dataset (8 variables + target team_goals)
+  - outputs_summary.txt – descriptive stats, correlations, VIF
+  - README_model22_Suman.md – data dictionary + notes for Prabin
 - **prabin_model22/** – to be added
 
 ## How to run
@@ -48,6 +52,8 @@ Requires Python 3.10+.
     cd ../nabin_model21
     python3 build_model21_full_dataset.py
     python3 model21_regression.py
+    cd ../suman_model22
+    python3 build_model22_dataset.py
 
 ## Data sources
 
@@ -58,12 +64,18 @@ Requires Python 3.10+.
 
 | Variable | Model 2.1 | Model 2.2 |
 |---|---|---|
-| elo_diff | ✅ | |
+| elo_diff | ✅ | ✅ |
 | h2h_score_rate | ✅ | |
 | rest_days_diff | ✅ | |
 | form_gd_diff | ✅ | |
-| host_adv_diff | ✅ | |
+| host_adv_diff (2.1) / host_adv (2.2, team view) | ✅ | ✅ |
 | squad_age_diff | ✅ | |
-| top5_share_diff | ✅ | |
+| top5_share_diff | ✅ | ✅ |
 | wc_exp_diff | ✅ | |
-| (Suman adds 8) | | ✅ |
+| attack_l10 | | ✅ |
+| opp_defence_l10 | | ✅ |
+| h2h_goals_pg | | ✅ |
+| elo_change_1y | | ✅ |
+| knockout | | ✅ |
+
+Shared between models: 3 (limit 4).

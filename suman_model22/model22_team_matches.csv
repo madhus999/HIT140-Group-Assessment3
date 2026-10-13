@@ -1,0 +1,209 @@
+match_id,date,stage,side,team,opponent,venue,opp_goals,h2h_meetings,elo_diff,top5_share_diff,host_adv,attack_l10,opp_defence_l10,h2h_goals_pg,elo_change_1y,knockout,team_goals
+1,2026-06-11,Group,1,Mexico,South Africa,Mexico City,0,4,313.8,0.115,1,1.6,1.0,2.5,61.5,0,2
+1,2026-06-11,Group,2,South Africa,Mexico,Mexico City,2,4,-313.8,-0.115,-1,1.5,0.4,1.25,-13.6,0,0
+2,2026-06-11,Group,1,South Korea,Czech Republic,Guadalajara (Zapopan),1,3,82.6,0.0,0,1.5,0.9,1.33,-4.6,0,2
+2,2026-06-11,Group,2,Czech Republic,South Korea,Guadalajara (Zapopan),2,3,-82.6,0.0,0,2.2,1.2,2.67,-2.3,0,1
+3,2026-06-12,Group,1,Canada,Bosnia and Herzegovina,Toronto,1,0,245.3,0.038,1,1.1,1.0,1.36,9.3,0,1
+3,2026-06-12,Group,2,Bosnia and Herzegovina,Canada,Toronto,1,0,-245.3,-0.038,-1,2.0,0.4,1.36,75.5,0,1
+4,2026-06-12,Group,1,United States,Paraguay,Los Angeles (Inglewood),1,9,-92.7,0.346,1,1.8,1.0,1.33,29.5,0,4
+4,2026-06-12,Group,2,Paraguay,United States,Los Angeles (Inglewood),4,9,92.7,-0.346,-1,1.2,1.7,0.78,16.7,0,1
+5,2026-06-13,Group,1,Qatar,Switzerland,San Francisco Bay Area (Santa Clara),1,1,-394.6,-0.885,0,0.7,0.8,1.0,-80.9,0,1
+5,2026-06-13,Group,2,Switzerland,Qatar,San Francisco Bay Area (Santa Clara),1,1,394.6,0.885,0,2.2,1.5,0.0,39.3,0,1
+6,2026-06-13,Group,1,Brazil,Morocco,New York/New Jersey (East Rutherford),1,3,83.7,-0.038,0,2.5,0.3,2.0,-8.4,0,1
+6,2026-06-13,Group,2,Morocco,Brazil,New York/New Jersey (East Rutherford),1,3,-83.7,0.038,0,2.2,1.1,0.67,75.1,0,1
+7,2026-06-13,Group,1,Haiti,Scotland,Boston (Foxborough),1,0,-136.9,-0.269,0,1.5,1.0,1.36,39.5,0,0
+7,2026-06-13,Group,2,Scotland,Haiti,Boston (Foxborough),0,0,136.9,0.269,0,2.1,1.0,1.36,72.7,0,1
+8,2026-06-13,Group,1,Australia,Turkey,Vancouver,0,2,-62.7,0.0,0,1.3,1.3,0.5,12.8,0,2
+8,2026-06-13,Group,2,Turkey,Australia,Vancouver,2,2,62.7,0.0,0,2.5,1.0,2.0,76.9,0,0
+9,2026-06-14,Group,1,Germany,Curaçao,Houston,1,0,406.9,0.846,0,2.8,1.4,1.36,17.6,0,7
+9,2026-06-14,Group,2,Curaçao,Germany,Houston,7,0,-406.9,-0.846,0,1.9,0.8,1.36,23.5,0,1
+10,2026-06-14,Group,1,Ivory Coast,Ecuador,Philadelphia,0,0,-212.2,0.192,0,1.9,0.5,1.36,105.7,0,1
+10,2026-06-14,Group,2,Ecuador,Ivory Coast,Philadelphia,1,0,212.2,-0.192,0,1.2,0.8,1.36,38.8,0,0
+11,2026-06-14,Group,1,Netherlands,Japan,Dallas (Arlington),2,3,20.2,0.346,0,2.2,0.6,2.0,-23.8,0,2
+11,2026-06-14,Group,2,Japan,Netherlands,Dallas (Arlington),2,3,-20.2,-0.346,0,1.9,0.8,0.67,31.2,0,2
+12,2026-06-14,Group,1,Sweden,Tunisia,Monterrey (Guadalupe),1,4,27.6,0.308,0,1.3,1.4,0.75,-44.0,0,5
+12,2026-06-14,Group,2,Tunisia,Sweden,Monterrey (Guadalupe),5,4,-27.6,-0.308,0,1.3,2.0,0.5,6.8,0,1
+13,2026-06-15,Group,1,Belgium,Egypt,Seattle,1,4,161.9,0.577,0,3.7,0.6,1.0,45.8,0,1
+13,2026-06-15,Group,2,Egypt,Belgium,Seattle,1,4,-161.9,-0.577,0,1.3,0.6,1.75,32.8,0,1
+14,2026-06-15,Group,1,Iran,New Zealand,Los Angeles (Inglewood),2,2,179.5,-0.269,0,1.7,1.8,1.5,-2.7,0,2
+14,2026-06-15,Group,2,New Zealand,Iran,Los Angeles (Inglewood),2,2,-179.5,0.269,0,0.7,0.6,0.0,-77.6,0,2
+15,2026-06-15,Group,1,Spain,Cape Verde,Atlanta,0,0,557.8,0.962,0,2.8,1.2,1.36,0.2,0,0
+15,2026-06-15,Group,2,Cape Verde,Spain,Atlanta,0,0,-557.8,-0.962,0,1.6,0.4,1.36,20.4,0,0
+16,2026-06-15,Group,1,Saudi Arabia,Uruguay,Miami (Miami Gardens),1,3,-284.3,-0.269,0,1.2,0.9,1.33,-16.5,0,1
+16,2026-06-15,Group,2,Uruguay,Saudi Arabia,Miami (Miami Gardens),1,3,284.3,0.269,0,1.0,1.3,1.33,-5.7,0,1
+17,2026-06-16,Group,1,France,Senegal,New York/New Jersey (East Rutherford),1,2,208.3,0.154,0,2.5,0.9,0.0,11.4,0,3
+17,2026-06-16,Group,2,Senegal,France,New York/New Jersey (East Rutherford),3,2,-208.3,-0.154,0,1.6,0.9,1.5,16.2,0,1
+18,2026-06-16,Group,1,Iraq,Norway,Boston (Foxborough),4,0,-219.3,-0.654,0,1.1,0.8,1.36,53.3,0,1
+18,2026-06-16,Group,2,Norway,Iraq,Boston (Foxborough),1,0,219.3,0.654,0,3.1,1.0,1.36,57.8,0,4
+19,2026-06-16,Group,1,Argentina,Algeria,Kansas City,0,1,305.5,0.269,0,2.5,0.4,4.0,-14.4,0,3
+19,2026-06-16,Group,2,Algeria,Argentina,Kansas City,3,1,-305.5,-0.269,0,2.1,0.3,3.0,71.2,0,0
+20,2026-06-16,Group,1,Austria,Jordan,San Francisco Bay Area (Santa Clara),1,0,120.9,0.654,0,2.7,1.5,1.36,-12.0,0,3
+20,2026-06-16,Group,2,Jordan,Austria,San Francisco Bay Area (Santa Clara),3,0,-120.9,-0.654,0,1.7,0.4,1.36,29.0,0,1
+21,2026-06-17,Group,1,Portugal,DR Congo,Houston,1,0,269.3,0.154,0,2.6,0.5,1.36,-29.4,0,1
+21,2026-06-17,Group,2,DR Congo,Portugal,Houston,1,0,-269.3,-0.154,0,1.1,0.9,1.36,63.9,0,1
+22,2026-06-17,Group,1,Uzbekistan,Colombia,Mexico City,3,0,-240.3,-0.308,0,1.4,1.0,1.36,-4.9,0,1
+22,2026-06-17,Group,2,Colombia,Uzbekistan,Mexico City,1,0,240.3,0.308,0,2.5,0.9,1.36,35.6,0,3
+23,2026-06-17,Group,1,England,Croatia,Dallas (Arlington),2,11,122.6,0.269,0,2.4,1.0,2.0,42.1,0,4
+23,2026-06-17,Group,2,Croatia,England,Dallas (Arlington),4,11,-122.6,-0.269,0,1.9,0.2,1.18,-11.0,0,2
+24,2026-06-17,Group,1,Ghana,Panama,Toronto,0,0,-223.3,0.615,0,1.1,1.6,1.36,27.4,0,1
+24,2026-06-17,Group,2,Panama,Ghana,Toronto,1,0,223.3,-0.615,0,1.8,1.4,1.36,-5.6,0,0
+25,2026-06-18,Group,1,Czech Republic,South Africa,Atlanta,1,1,119.1,0.192,0,2.1,1.2,2.0,-25.3,0,1
+25,2026-06-18,Group,2,South Africa,Czech Republic,Atlanta,1,1,-119.1,-0.192,0,1.2,1.1,2.0,-21.2,0,1
+26,2026-06-18,Group,1,Mexico,South Korea,Guadalajara (Zapopan),0,14,81.3,-0.077,1,1.8,1.3,2.0,65.5,0,1
+26,2026-06-18,Group,2,South Korea,Mexico,Guadalajara (Zapopan),1,14,-81.3,0.077,-1,1.5,0.4,1.07,18.4,0,0
+27,2026-06-18,Group,1,Switzerland,Bosnia and Herzegovina,Los Angeles (Inglewood),1,1,264.3,0.538,0,1.9,1.1,0.0,14.9,0,4
+27,2026-06-18,Group,2,Bosnia and Herzegovina,Switzerland,Los Angeles (Inglewood),4,1,-264.3,-0.538,0,1.5,0.9,2.0,98.3,0,1
+28,2026-06-18,Group,1,Canada,Qatar,Vancouver,0,1,281.3,0.385,1,0.9,1.4,2.0,-29.2,0,6
+28,2026-06-18,Group,2,Qatar,Canada,Vancouver,6,1,-281.3,-0.385,-1,0.6,0.5,0.0,-56.5,0,0
+29,2026-06-19,Group,1,Scotland,Morocco,Boston (Foxborough),1,1,-138.8,0.0,0,2.2,0.4,0.0,91.4,0,0
+29,2026-06-19,Group,2,Morocco,Scotland,Boston (Foxborough),0,1,138.8,0.0,0,2.0,1.0,3.0,82.2,0,1
+30,2026-06-19,Group,1,Brazil,Haiti,Philadelphia,0,3,382.8,0.231,0,2.3,1.1,5.67,-15.5,0,3
+30,2026-06-19,Group,2,Haiti,Brazil,Philadelphia,3,3,-382.8,-0.231,0,1.5,1.2,0.33,42.2,0,0
+31,2026-06-19,Group,1,United States,Australia,Seattle,0,4,-76.9,0.192,1,2.2,1.0,1.25,69.1,0,2
+31,2026-06-19,Group,2,Australia,United States,Seattle,2,4,76.9,-0.192,-1,1.4,1.6,0.75,65.8,0,0
+32,2026-06-19,Group,1,Turkey,Paraguay,San Francisco Bay Area (Santa Clara),1,0,43.6,0.154,0,2.2,1.3,1.36,23.9,0,0
+32,2026-06-19,Group,2,Paraguay,Turkey,San Francisco Bay Area (Santa Clara),0,0,-43.6,-0.154,0,1.3,1.3,1.36,-34.7,0,1
+33,2026-06-20,Group,1,Germany,Ivory Coast,Toronto,1,1,157.8,0.5,0,3.5,0.7,2.0,28.7,0,2
+33,2026-06-20,Group,2,Ivory Coast,Germany,Toronto,2,1,-157.8,-0.5,0,2.0,0.7,2.0,152.0,0,1
+34,2026-06-20,Group,1,Ecuador,Curaçao,Kansas City,0,0,391.1,0.154,0,1.2,2.1,1.36,-7.5,0,0
+34,2026-06-20,Group,2,Curaçao,Ecuador,Kansas City,0,0,-391.1,-0.154,0,2.0,0.6,1.36,14.7,0,0
+35,2026-06-20,Group,1,Netherlands,Sweden,Houston,1,25,193.6,0.192,0,2.3,1.9,1.88,-25.5,0,5
+35,2026-06-20,Group,2,Sweden,Netherlands,Houston,5,25,-193.6,-0.192,0,1.6,0.9,1.92,7.8,0,1
+36,2026-06-20,Group,1,Tunisia,Japan,Monterrey (Guadalupe),4,5,-308.1,-0.154,0,1.2,0.8,0.6,-45.0,0,0
+36,2026-06-20,Group,2,Japan,Tunisia,Monterrey (Guadalupe),0,5,308.1,0.154,0,1.5,1.7,1.2,33.0,0,4
+37,2026-06-21,Group,1,Belgium,Iran,Los Angeles (Inglewood),0,0,64.2,0.769,0,3.2,0.7,1.36,32.7,0,0
+37,2026-06-21,Group,2,Iran,Belgium,Los Angeles (Inglewood),0,0,-64.2,-0.769,0,1.9,0.7,1.36,-16.9,0,0
+38,2026-06-21,Group,1,New Zealand,Egypt,Vancouver,3,3,-79.5,0.077,0,0.9,0.7,0.33,-63.3,0,1
+38,2026-06-21,Group,2,Egypt,New Zealand,Vancouver,1,3,79.5,-0.077,0,1.3,1.9,1.0,45.9,0,3
+39,2026-06-21,Group,1,Spain,Saudi Arabia,Atlanta,0,3,472.6,0.962,0,2.5,1.3,3.0,-27.5,0,4
+39,2026-06-21,Group,2,Saudi Arabia,Spain,Atlanta,4,3,-472.6,-0.962,0,1.1,0.4,0.67,-4.6,0,0
+40,2026-06-21,Group,1,Uruguay,Cape Verde,Miami (Miami Gardens),2,0,273.8,0.269,0,1.1,1.2,1.36,-26.0,0,2
+40,2026-06-21,Group,2,Cape Verde,Uruguay,Miami (Miami Gardens),2,0,-273.8,-0.269,0,1.4,0.8,1.36,48.0,0,2
+41,2026-06-22,Group,1,France,Iraq,Philadelphia,0,0,428.3,0.846,0,2.6,1.3,1.36,32.3,0,3
+41,2026-06-22,Group,2,Iraq,France,Philadelphia,3,0,-428.3,-0.846,0,1.1,1.0,1.36,30.1,0,0
+42,2026-06-22,Group,1,Norway,Senegal,New York/New Jersey (East Rutherford),2,1,87.3,-0.038,0,3.4,1.1,1.0,81.0,0,3
+42,2026-06-22,Group,2,Senegal,Norway,New York/New Jersey (East Rutherford),3,1,-87.3,0.038,0,1.6,0.9,2.0,-4.6,0,2
+43,2026-06-22,Group,1,Argentina,Austria,Dallas (Arlington),0,2,280.1,0.077,0,2.7,0.5,3.0,1.0,0,2
+43,2026-06-22,Group,2,Austria,Argentina,Dallas (Arlington),2,2,-280.1,-0.077,0,2.6,0.2,1.0,17.9,0,0
+44,2026-06-22,Group,1,Jordan,Algeria,San Francisco Bay Area (Santa Clara),2,2,-124.6,-0.462,0,1.6,0.6,0.5,-1.0,0,1
+44,2026-06-22,Group,2,Algeria,Jordan,San Francisco Bay Area (Santa Clara),1,2,124.6,0.462,0,2.0,1.7,3.5,55.8,0,2
+45,2026-06-23,Group,1,Portugal,Uzbekistan,Houston,0,0,207.4,0.615,0,2.2,1.2,1.36,-48.9,0,5
+45,2026-06-23,Group,2,Uzbekistan,Portugal,Houston,5,0,-207.4,-0.615,0,1.2,1.0,1.36,-23.0,0,0
+46,2026-06-23,Group,1,Colombia,DR Congo,Guadalajara (Zapopan),0,0,299.3,-0.154,0,2.5,0.6,1.36,53.6,0,1
+46,2026-06-23,Group,2,DR Congo,Colombia,Guadalajara (Zapopan),1,0,-299.3,0.154,0,1.1,1.1,1.36,83.4,0,0
+47,2026-06-23,Group,1,England,Ghana,Boston (Foxborough),0,1,445.5,0.308,0,2.6,1.3,1.0,71.8,0,0
+47,2026-06-23,Group,2,Ghana,England,Boston (Foxborough),0,1,-445.5,-0.308,0,1.1,0.4,1.0,74.4,0,0
+48,2026-06-23,Group,1,Panama,Croatia,Toronto,1,0,-134.0,-0.654,0,1.7,1.4,1.36,-64.5,0,0
+48,2026-06-23,Group,2,Croatia,Panama,Toronto,0,0,134.0,0.654,0,2.0,1.6,1.36,-40.7,0,1
+49,2026-06-24,Group,1,Czech Republic,Mexico,Mexico City,3,1,-235.4,0.077,-1,2.1,0.2,2.0,-35.2,0,0
+49,2026-06-24,Group,2,Mexico,Czech Republic,Mexico City,0,1,235.4,-0.077,1,1.8,1.1,1.0,81.2,0,3
+50,2026-06-24,Group,1,South Africa,South Korea,Monterrey (Guadalupe),0,0,-222.2,-0.192,0,1.0,1.2,1.36,-11.3,0,1
+50,2026-06-24,Group,2,South Korea,South Africa,Monterrey (Guadalupe),1,0,222.2,0.192,0,1.3,1.2,1.36,2.8,0,0
+51,2026-06-24,Group,1,Switzerland,Canada,Vancouver,1,1,70.6,0.5,-1,2.0,0.5,1.0,33.7,0,2
+51,2026-06-24,Group,2,Canada,Switzerland,Vancouver,2,1,-70.6,-0.5,1,1.4,1.0,3.0,2.0,0,1
+52,2026-06-24,Group,1,Bosnia and Herzegovina,Qatar,Seattle,1,2,75.5,0.346,0,1.5,1.6,0.5,79.5,0,3
+52,2026-06-24,Group,2,Qatar,Bosnia and Herzegovina,Seattle,3,2,-75.5,-0.346,0,0.5,1.3,1.5,-69.2,0,1
+53,2026-06-24,Group,1,Scotland,Brazil,Miami (Miami Gardens),3,10,-237.4,0.038,0,2.0,1.1,0.3,72.8,0,0
+53,2026-06-24,Group,2,Brazil,Scotland,Miami (Miami Gardens),0,10,237.4,-0.038,0,2.6,1.1,1.6,-5.0,0,3
+54,2026-06-24,Group,1,Morocco,Haiti,Atlanta,2,0,342.3,0.269,0,2.0,1.1,1.36,100.8,0,4
+54,2026-06-24,Group,2,Haiti,Morocco,Atlanta,4,0,-342.3,-0.269,0,1.2,0.4,1.36,46.6,0,2
+55,2026-06-25,Group,1,Turkey,United States,Los Angeles (Inglewood),2,5,-42.2,-0.192,-1,2.2,1.6,1.4,-9.8,0,3
+55,2026-06-25,Group,2,United States,Turkey,Los Angeles (Inglewood),3,5,42.2,0.192,1,2.2,0.8,1.4,90.1,0,2
+56,2026-06-25,Group,1,Paraguay,Australia,San Francisco Bay Area (Santa Clara),0,5,-11.2,-0.154,0,1.4,1.1,0.4,-1.0,0,0
+56,2026-06-25,Group,2,Australia,Paraguay,San Francisco Bay Area (Santa Clara),0,5,11.2,0.154,0,1.1,1.3,0.8,23.8,0,0
+57,2026-06-25,Group,1,Curaçao,Ivory Coast,Philadelphia,2,0,-230.0,-0.346,0,1.7,0.9,1.36,38.7,0,0
+57,2026-06-25,Group,2,Ivory Coast,Curaçao,Philadelphia,0,0,230.0,0.346,0,1.9,1.9,1.36,134.8,0,2
+58,2026-06-25,Group,1,Ecuador,Germany,New York/New Jersey (East Rutherford),1,2,-79.8,-0.692,0,1.1,0.7,1.0,-31.8,0,2
+58,2026-06-25,Group,2,Germany,Ecuador,New York/New Jersey (East Rutherford),2,2,79.8,0.692,0,3.4,0.6,3.5,46.0,0,1
+59,2026-06-25,Group,1,Japan,Sweden,Dallas (Arlington),1,4,221.0,-0.154,0,1.9,2.2,1.0,49.3,0,1
+59,2026-06-25,Group,2,Sweden,Japan,Dallas (Arlington),1,4,-221.0,0.154,0,1.7,0.8,1.25,-20.0,0,1
+60,2026-06-25,Group,1,Tunisia,Netherlands,Kansas City,3,3,-368.9,-0.5,0,0.9,0.8,1.0,-61.3,0,1
+60,2026-06-25,Group,2,Netherlands,Tunisia,Kansas City,1,3,368.9,0.5,0,2.5,2.1,2.33,2.3,0,3
+61,2026-06-26,Group,1,Egypt,Iran,Seattle,1,1,-42.2,0.192,0,1.6,0.7,1.0,80.7,0,1
+61,2026-06-26,Group,2,Iran,Egypt,Seattle,1,1,42.2,-0.192,0,1.6,0.8,1.0,-11.5,0,1
+62,2026-06-26,Group,1,New Zealand,Belgium,Vancouver,5,0,-244.7,-0.5,0,0.9,0.7,1.36,-98.2,0,1
+62,2026-06-26,Group,2,Belgium,New Zealand,Vancouver,1,0,244.7,0.5,0,2.6,1.9,1.36,27.2,0,5
+63,2026-06-26,Group,1,Cape Verde,Saudi Arabia,Houston,0,0,-3.2,0.0,0,1.5,1.6,1.36,67.7,0,0
+63,2026-06-26,Group,2,Saudi Arabia,Cape Verde,Houston,0,0,3.2,0.0,0,0.8,1.4,1.36,-0.1,0,0
+64,2026-06-26,Group,1,Uruguay,Spain,Guadalajara (Zapopan),1,10,-255.4,-0.692,0,1.1,0.4,0.8,-45.7,0,0
+64,2026-06-26,Group,2,Spain,Uruguay,Guadalajara (Zapopan),0,10,255.4,0.692,0,2.3,1.0,1.6,-20.6,0,1
+65,2026-06-26,Group,1,Norway,France,Boston (Foxborough),4,16,-148.4,-0.192,0,2.6,0.9,1.38,103.6,0,1
+65,2026-06-26,Group,2,France,Norway,Boston (Foxborough),1,16,148.4,0.192,0,2.7,1.0,1.38,40.5,0,4
+66,2026-06-26,Group,1,Senegal,Iraq,Toronto,0,0,163.9,0.692,0,1.5,1.5,1.36,-27.3,0,5
+66,2026-06-26,Group,2,Iraq,Senegal,Toronto,5,0,-163.9,-0.692,0,0.9,1.4,1.36,21.9,0,0
+67,2026-06-27,Group,1,Algeria,Austria,Kansas City,3,1,-21.5,-0.192,0,1.9,0.7,0.0,75.5,0,3
+67,2026-06-27,Group,2,Austria,Algeria,Kansas City,3,1,21.5,0.192,0,2.5,0.7,2.0,3.0,0,3
+68,2026-06-27,Group,1,Jordan,Argentina,Dallas (Arlington),3,0,-495.6,-0.731,0,1.4,0.2,1.36,-20.7,0,1
+68,2026-06-27,Group,2,Argentina,Jordan,Dallas (Arlington),1,0,495.6,0.731,0,2.6,1.8,1.36,16.0,0,3
+69,2026-06-27,Group,1,Colombia,Portugal,Miami (Miami Gardens),0,0,50.2,-0.308,0,2.0,0.8,1.36,62.7,0,0
+69,2026-06-27,Group,2,Portugal,Colombia,Miami (Miami Gardens),0,0,-50.2,0.308,0,2.4,0.8,1.36,-21.0,0,0
+70,2026-06-27,Group,1,DR Congo,Uzbekistan,Atlanta,1,0,-4.1,0.462,0,1.0,1.7,1.36,74.3,0,3
+70,2026-06-27,Group,2,Uzbekistan,DR Congo,Atlanta,3,0,4.1,-0.462,0,1.0,0.6,1.36,-50.9,0,1
+71,2026-06-27,Group,1,Panama,England,New York/New Jersey (East Rutherford),2,1,-309.4,-0.923,0,1.4,0.4,1.0,-107.5,0,0
+71,2026-06-27,Group,2,England,Panama,New York/New Jersey (East Rutherford),0,1,309.4,0.923,0,2.1,1.5,6.0,46.1,0,2
+72,2026-06-27,Group,1,Croatia,Ghana,Philadelphia,1,0,256.6,0.038,0,1.7,1.3,1.36,-21.8,0,2
+72,2026-06-27,Group,2,Ghana,Croatia,Philadelphia,2,0,-256.6,-0.038,0,1.0,1.4,1.36,100.1,0,1
+73,2026-06-28,Round of 32,1,South Africa,Canada,Los Angeles (Inglewood),1,1,-140.8,-0.346,0,0.9,0.6,2.0,35.6,1,0
+73,2026-06-28,Round of 32,2,Canada,South Africa,Los Angeles (Inglewood),0,1,140.8,0.346,0,1.5,1.1,0.0,-38.9,1,1
+74,2026-06-29,Round of 32,1,Germany,Paraguay,Boston (Foxborough),1,2,97.7,0.769,0,3.1,1.3,2.0,9.2,1,1
+74,2026-06-29,Round of 32,2,Paraguay,Germany,Boston (Foxborough),1,2,-97.7,-0.769,0,1.3,0.9,1.5,-0.0,1,1
+75,2026-06-29,Round of 32,1,Netherlands,Morocco,Monterrey (Guadalupe),1,3,27.2,0.269,0,2.4,0.6,1.67,11.9,1,1
+75,2026-06-29,Round of 32,2,Morocco,Netherlands,Monterrey (Guadalupe),1,3,-27.2,-0.269,0,2.2,0.9,1.33,111.8,1,1
+76,2026-06-29,Round of 32,1,Brazil,Japan,Houston,1,14,99.1,0.038,0,2.4,0.7,2.64,16.3,1,2
+76,2026-06-29,Round of 32,2,Japan,Brazil,Houston,2,14,-99.1,-0.038,0,2.0,1.1,0.57,32.4,1,1
+77,2026-06-30,Round of 32,1,France,Sweden,New York/New Jersey (East Rutherford),0,23,376.0,0.269,0,2.8,2.1,1.48,71.8,1,3
+77,2026-06-30,Round of 32,2,Sweden,France,New York/New Jersey (East Rutherford),3,23,-376.0,-0.269,0,1.8,1.0,1.0,-3.1,1,0
+78,2026-06-30,Round of 32,1,Ivory Coast,Norway,Dallas (Arlington),2,0,-108.8,-0.269,0,2.0,1.4,1.36,153.7,1,1
+78,2026-06-30,Round of 32,2,Norway,Ivory Coast,Dallas (Arlington),1,0,108.8,0.269,0,2.2,0.9,1.36,72.2,1,2
+79,2026-06-30,Round of 32,1,Mexico,Ecuador,Mexico City,0,26,19.6,-0.077,1,2.0,0.6,1.65,77.5,1,2
+79,2026-06-30,Round of 32,2,Ecuador,Mexico,Mexico City,2,26,-19.6,0.077,-1,1.2,0.2,1.04,5.0,1,0
+80,2026-07-01,Round of 32,1,England,DR Congo,Atlanta,1,0,285.8,0.462,0,2.0,0.7,1.36,59.1,1,2
+80,2026-07-01,Round of 32,2,DR Congo,England,Atlanta,2,0,-285.8,-0.462,0,1.2,0.4,1.36,119.8,1,1
+81,2026-07-01,Round of 32,1,United States,Bosnia and Herzegovina,San Francisco Bay Area (Santa Clara),0,3,188.4,0.154,1,2.3,1.2,1.67,56.6,1,2
+81,2026-07-01,Round of 32,2,Bosnia and Herzegovina,United States,San Francisco Bay Area (Santa Clara),2,3,-188.4,-0.154,-1,1.6,1.8,1.0,114.9,1,0
+82,2026-07-01,Round of 32,1,Belgium,Senegal,Seattle,2,0,71.6,0.0,0,3.1,1.3,1.36,49.3,1,2
+82,2026-07-01,Round of 32,2,Senegal,Belgium,Seattle,2,0,-71.6,0.0,0,1.7,0.8,1.36,6.4,1,2
+83,2026-07-02,Round of 32,1,Portugal,Croatia,Toronto,1,10,79.6,-0.038,0,2.3,1.5,1.9,-16.7,1,2
+83,2026-07-02,Round of 32,2,Croatia,Portugal,Toronto,2,10,-79.6,0.038,0,1.9,0.8,0.8,-10.6,1,1
+84,2026-07-02,Round of 32,1,Spain,Austria,Los Angeles (Inglewood),0,16,293.7,0.308,0,2.2,0.9,2.69,-9.3,1,3
+84,2026-07-02,Round of 32,2,Austria,Spain,Los Angeles (Inglewood),3,16,-293.7,-0.308,0,2.6,0.4,1.38,1.1,1,0
+85,2026-07-02,Round of 32,1,Switzerland,Algeria,Vancouver,0,2,97.8,0.423,0,2.0,1.0,2.0,66.3,1,2
+85,2026-07-02,Round of 32,2,Algeria,Switzerland,Vancouver,2,2,-97.8,-0.423,0,2.1,1.1,0.5,77.4,1,0
+86,2026-07-03,Round of 32,1,Argentina,Cape Verde,Miami (Miami Gardens),1,0,523.8,0.731,0,2.9,1.1,1.36,20.9,1,1
+86,2026-07-03,Round of 32,2,Cape Verde,Argentina,Miami (Miami Gardens),1,0,-523.8,-0.731,0,1.2,0.2,1.36,68.0,1,1
+87,2026-07-03,Round of 32,1,Colombia,Ghana,Kansas City,0,0,400.1,-0.308,0,1.6,1.5,1.36,58.4,1,1
+87,2026-07-03,Round of 32,2,Ghana,Colombia,Kansas City,1,0,-400.1,0.308,0,0.6,0.8,1.36,89.0,1,0
+88,2026-07-03,Round of 32,1,Australia,Egypt,Dallas (Arlington),1,2,49.2,0.154,0,1.0,0.8,0.0,22.8,1,1
+88,2026-07-03,Round of 32,2,Egypt,Australia,Dallas (Arlington),1,2,-49.2,-0.154,0,1.4,1.1,1.5,84.4,1,1
+89,2026-07-04,Round of 16,1,Paraguay,France,Philadelphia,1,5,-283.6,-0.731,0,1.2,0.8,0.8,8.2,1,0
+89,2026-07-04,Round of 16,2,France,Paraguay,Philadelphia,0,5,283.6,0.731,0,2.9,1.2,2.8,82.7,1,1
+90,2026-07-04,Round of 16,1,Canada,Morocco,Houston,3,4,-152.8,-0.154,0,1.6,0.7,1.0,-5.8,1,0
+90,2026-07-04,Round of 16,2,Morocco,Canada,Houston,0,4,152.8,0.154,0,2.3,0.6,2.5,114.1,1,3
+91,2026-07-05,Round of 16,1,Brazil,Norway,New York/New Jersey (East Rutherford),2,4,122.2,-0.192,0,2.4,1.4,1.25,37.9,1,1
+91,2026-07-05,Round of 16,2,Norway,Brazil,New York/New Jersey (East Rutherford),1,4,-122.2,0.192,0,2.3,0.9,2.0,93.1,1,2
+92,2026-07-05,Round of 16,1,Mexico,England,Mexico City,3,10,-71.2,-0.769,1,2.1,0.5,0.4,96.4,1,2
+92,2026-07-05,Round of 16,2,England,Mexico,Mexico City,2,10,71.2,0.769,-1,1.7,0.2,2.7,68.8,1,3
+93,2026-07-06,Round of 16,1,Portugal,Spain,Dallas (Arlington),1,42,-150.1,-0.346,0,2.3,0.4,1.19,6.6,1,0
+93,2026-07-06,Round of 16,2,Spain,Portugal,Dallas (Arlington),0,42,150.1,0.346,0,2.1,0.7,1.86,7.0,1,1
+94,2026-07-06,Round of 16,1,United States,Belgium,Seattle,4,8,-107.8,-0.231,1,2.3,0.8,1.0,61.3,1,1
+94,2026-07-06,Round of 16,2,Belgium,United States,Seattle,1,8,107.8,0.231,-1,3.0,1.7,2.75,73.2,1,4
+95,2026-07-07,Round of 16,1,Argentina,Egypt,Atlanta,2,2,361.8,0.577,0,3.1,0.7,4.0,23.7,1,3
+95,2026-07-07,Round of 16,2,Egypt,Argentina,Atlanta,3,2,-361.8,-0.577,0,1.2,0.4,0.0,88.6,1,2
+96,2026-07-07,Round of 16,1,Switzerland,Colombia,Vancouver,0,4,-71.0,0.577,0,2.2,0.8,1.5,98.9,1,0
+96,2026-07-07,Round of 16,2,Colombia,Switzerland,Vancouver,0,4,71.0,-0.577,0,1.7,1.1,2.25,63.9,1,0
+97,2026-07-09,Quarter-final,1,France,Morocco,Boston (Foxborough),0,6,148.8,0.346,0,2.6,0.7,2.33,92.5,1,2
+97,2026-07-09,Quarter-final,2,Morocco,France,Boston (Foxborough),2,6,-148.8,-0.346,0,2.3,0.8,1.0,144.9,1,0
+98,2026-07-10,Quarter-final,1,Spain,Belgium,Los Angeles (Inglewood),1,22,185.0,0.231,0,1.8,0.8,2.0,24.8,1,2
+98,2026-07-10,Quarter-final,2,Belgium,Spain,Los Angeles (Inglewood),2,22,-185.0,-0.231,0,3.3,0.4,1.0,124.5,1,1
+99,2026-07-11,Quarter-final,1,Norway,England,Miami (Miami Gardens),1,12,-113.9,-0.231,0,2.1,0.7,0.58,133.3,1,1
+99,2026-07-11,Quarter-final,2,England,Norway,Miami (Miami Gardens),1,12,113.9,0.231,0,1.8,1.4,2.33,101.3,1,1
+100,2026-07-11,Quarter-final,1,Argentina,Switzerland,Kansas City,1,7,207.6,-0.154,0,2.8,1.0,2.14,30.4,1,1
+100,2026-07-11,Quarter-final,2,Switzerland,Argentina,Kansas City,1,7,-207.6,0.154,0,1.8,0.6,0.43,105.0,1,1
+101,2026-07-14,Semi-final,1,France,Spain,Dallas (Arlington),2,38,-21.2,-0.077,0,2.5,0.3,1.16,119.3,1,0
+101,2026-07-14,Semi-final,2,Spain,France,Dallas (Arlington),0,38,21.2,0.077,0,1.8,0.7,1.87,40.2,1,2
+102,2026-07-15,Semi-final,1,England,Argentina,Atlanta,2,15,-88.2,0.192,0,1.8,0.7,1.47,121.8,1,1
+102,2026-07-15,Semi-final,2,Argentina,England,Atlanta,1,15,88.2,-0.192,0,2.9,0.8,1.2,51.3,1,2
+103,2026-07-18,Match for third place,1,France,England,Miami (Miami Gardens),6,34,43.3,-0.038,0,2.3,0.9,1.32,77.0,1,4
+103,2026-07-18,Match for third place,2,England,France,Miami (Miami Gardens),4,34,-43.3,0.038,0,1.8,0.8,2.21,99.3,1,6
+104,2026-07-19,Final,1,Spain,Argentina,New York/New Jersey (East Rutherford),0,14,15.7,0.231,0,1.7,0.7,1.36,82.4,1,0
+104,2026-07-19,Final,2,Argentina,Spain,New York/New Jersey (East Rutherford),0,14,-15.7,-0.231,0,2.9,0.3,1.29,73.8,1,0

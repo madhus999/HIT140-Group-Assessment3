@@ -1,0 +1,55 @@
+wrote model22_team_matches.csv: 208 rows, 8 explanatory variables
+shared with Model 2.1 (3): ['elo_diff', 'host_adv', 'top5_share_diff']
+h2h fallback = 1.36 goals/game; pairs never met: 33
+
+       elo_diff  top5_share_diff  host_adv  attack_l10  opp_defence_l10  h2h_goals_pg  elo_change_1y  knockout  team_goals
+count    208.00           208.00    208.00      208.00           208.00        208.00         208.00    208.00      208.00
+mean       0.00             0.00      0.00        1.88             0.97          1.45          30.50      0.31        1.44
+std      228.53             0.42      0.35        0.64             0.44          0.82          50.55      0.46        1.39
+min     -557.80            -0.96     -1.00        0.50             0.20          0.00        -107.50      0.00        0.00
+25%     -154.05            -0.27      0.00        1.40             0.70          1.00          -5.15      0.00        0.00
+50%        0.00             0.00      0.00        1.90             0.90          1.36          28.85      0.00        1.00
+75%      154.05             0.27      0.00        2.30             1.30          1.65          71.80      1.00        2.00
+max      557.80             0.96      1.00        3.70             2.20          6.00         153.70      1.00        7.00
+
+correlation with team_goals:
+elo_diff           0.461
+top5_share_diff    0.437
+opp_defence_l10    0.284
+attack_l10         0.253
+h2h_goals_pg       0.202
+host_adv           0.148
+elo_change_1y     -0.016
+knockout          -0.055
+
+team_goals counts:
+team_goals
+0    56
+1    74
+2    38
+3    22
+4    10
+5     5
+6     2
+7     1
+
+VIF:
+elo_diff           2.53
+top5_share_diff    1.93
+host_adv           1.05
+attack_l10         1.67
+opp_defence_l10    1.46
+h2h_goals_pg       1.15
+elo_change_1y      1.28
+knockout           1.22
+
+feature inter-correlation:
+                 elo_diff  top5_share_diff  host_adv  attack_l10  opp_defence_l10  h2h_goals_pg  elo_change_1y  knockout
+elo_diff             1.00             0.66      0.12        0.46             0.46          0.30          -0.00     -0.00
+top5_share_diff      0.66             1.00     -0.02        0.46             0.30          0.26           0.07     -0.00
+host_adv             0.12            -0.02      1.00        0.03             0.05          0.06           0.08      0.00
+attack_l10           0.46             0.46      0.03        1.00            -0.02          0.29           0.27      0.19
+opp_defence_l10      0.46             0.30      0.05       -0.02             1.00          0.04          -0.01     -0.16
+h2h_goals_pg         0.30             0.26      0.06        0.29             0.04          1.00           0.03      0.04
+elo_change_1y       -0.00             0.07      0.08        0.27            -0.01          0.03           1.00      0.37
+knockout            -0.00            -0.00      0.00        0.19            -0.16          0.04           0.37      1.00
