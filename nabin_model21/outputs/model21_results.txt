@@ -55,8 +55,8 @@ wc_exp_diff         0.5227   0.0000
 Dep. Variable:              goal_diff   R-squared:                       0.471
 Model:                            OLS   Adj. R-squared:                  0.427
 Method:                 Least Squares   F-statistic:                     10.58
-Date:                Sat, 10 Oct 2026   Prob (F-statistic):           1.62e-10
-Time:                        15:20:56   Log-Likelihood:                -186.73
+Date:                Tue, 13 Oct 2026   Prob (F-statistic):           1.62e-10
+Time:                        12:04:37   Log-Likelihood:                -186.73
 No. Observations:                 104   AIC:                             391.5
 Df Residuals:                      95   BIC:                             415.3
 Df Model:                           8                                         
