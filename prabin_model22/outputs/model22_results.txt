@@ -1,0 +1,29 @@
+HIT140 Assessment 3 - Model 2.2
+Prabin Shrestha
+
+Data source: model22_team_matches.csv
+Rows: 208
+Shared variables with Model 2.1: ['elo_diff', 'host_adv', 'top5_share_diff'] (3)
+Overlap rule check: within the 4-variable cap.
+
+Dependent variable: team_goals = goals scored by team in a match (90 min)
+
+OLS regression with cluster-robust standard errors by match_id
+
+R-squared: 0.272
+Adjusted R-squared: 0.242
+RMSE: 1.180
+F-statistic: 8.70 (p=5.17e-09)
+
+Coefficient estimates:
+- elo_diff: coef=0.0012, p=0.0257
+- top5_share_diff: coef=0.8012, p=0.0010
+- host_adv: coef=0.4821, p=0.0485
+- attack_l10: coef=0.1104, p=0.5446
+- opp_defence_l10: coef=0.3371, p=0.1444
+- h2h_goals_pg: coef=0.0927, p=0.3562
+- elo_change_1y: coef=-0.0012, p=0.5063
+- knockout: coef=-0.0993, p=0.6107
+
+Model 2.2 is a count outcome with a right-skewed distribution; the
+cluster-robust approach is used because two rows come from the same match.
