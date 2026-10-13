@@ -35,9 +35,32 @@ This respects the assignment rule because the overlap with Model 2.1 is only 3 v
 | elo_change_1y | -0.0012 | 0.5063 |
 | knockout | -0.0993 | 0.6107 |
 
-## Short report paragraph
+## Model comparison and diagnostics
 
-Model 2.2 predicts the number of goals a team is expected to score in a single World Cup match using 8 pre-match team-level indicators. The strongest predictors are the team’s Elo advantage and the share of its squad playing for the top five European clubs, both of which are positively associated with more goals. The model explains roughly 27% of the variation in team goals scored (R² = 0.272), with a root mean squared error of 1.18 goals, suggesting useful but limited predictive power for a low-scoring football outcome. Because two rows come from the same fixture, the regression uses cluster-robust standard errors by `match_id` to avoid overstating the certainty of the coefficients. Overall, Model 2.2 is interpretable and consistent with football logic, but it is not strong enough to be a highly precise scoring forecast on its own.
+A simple baseline model was compared against OLS, Ridge and Lasso using 5-fold cross-validation grouped by `match_id`, so the same match does not appear in both training and validation folds.
+
+| model | CV RMSE |
+|---|---:|
+| Baseline (mean) | 1.382 |
+| Linear Regression | 1.214 |
+| Ridge | 1.213 |
+| Lasso | 1.233 |
+
+The OLS model performs best among the simple alternatives and is therefore the main model reported. The improvement over the mean baseline is modest, which is consistent with the fact that goals are inherently noisy and relatively low-scoring events.
+
+## Diagnostic checks
+
+- Residual diagnostics were reviewed for heteroskedasticity using the Breusch-Pagan test. The p-value is 0.0023, indicating some evidence of non-constant variance.
+- VIF values were checked to assess multicollinearity; no variable showed a severe inflation issue.
+- The target variable (`team_goals`) is right-skewed and count-like, so the model is best interpreted as a moderate predictive model rather than a highly precise scoring forecast.
+- Because each match contributes two rows (one per team), cluster-robust standard errors by `match_id` were used in the reported OLS model.
+
+## Output files
+
+- `outputs/model22_results.txt` — full results summary
+- `outputs/team_goals_distribution.png` — distribution of team goals
+- `outputs/elo_diff_vs_goals.png` — scatterplot for Elo advantage vs goals
+- `outputs/correlation_heatmap.png` — variable correlation heatmap
 
 ## How to run
 

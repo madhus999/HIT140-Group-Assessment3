@@ -15,6 +15,12 @@ Adjusted R-squared: 0.242
 RMSE: 1.180
 F-statistic: 8.70 (p=5.17e-09)
 
+Model comparison (5-fold GroupKFold by match_id):
+- Baseline (mean): RMSE = 1.382
+- Linear Regression: RMSE = 1.214
+- Ridge: RMSE = 1.213
+- Lasso: RMSE = 1.233
+
 Coefficient estimates:
 - elo_diff: coef=0.0012, p=0.0257
 - top5_share_diff: coef=0.8012, p=0.0010
@@ -24,6 +30,11 @@ Coefficient estimates:
 - h2h_goals_pg: coef=0.0927, p=0.3562
 - elo_change_1y: coef=-0.0012, p=0.5063
 - knockout: coef=-0.0993, p=0.6107
+
+Diagnostic checks:
+- Breusch-Pagan p-value: 0.0023
+- VIF values were checked to assess multicollinearity; all values were below a concern threshold for this model.
+- Team goals is right-skewed and the model is best interpreted as a moderate predictive model rather than a highly precise scoring forecast.
 
 Model 2.2 is a count outcome with a right-skewed distribution; the
 cluster-robust approach is used because two rows come from the same match.
