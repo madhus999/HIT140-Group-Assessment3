@@ -17,10 +17,10 @@ Two linear regression models on FIFA World Cup 2026 data, built in Python.
 
 | Member | Student ID | Role | Folder |
 |---|---|---|---|
-| KB (Khadka Bohora) |  | Model 2.1 dataset: 104 matches + 4 pre-match vars | kb_model21/ |
+| KB (Khadka Bohora) | s397792 | Model 2.1 dataset: 104 matches + 4 pre-match vars | kb_model21/ |
 | Nabin | s397551 | Model 2.1: remaining 4 vars + regression | nabin_model21/ |
 | Suman Silwal | s397846 | Model 2.2 dataset: 208 team-match rows + 8 vars | suman_model22/ |
-| Prabin |  | Model 2.2 regression, assumption checks, report | prabin_model22/ |
+| Prabin | s397986 | Model 2.2 regression, assumption checks, report | prabin_model22/ |
 
 ## Repository structure
 

@@ -1,5 +1,7 @@
 # Model 2.1 – Match dataset (KB part)
 
+**Student ID:** s397792 (KB / Khadka Bohora)
+
 **File:** `model21_matches_KB.csv` — 104 rows (every WC 2026 match), 0 missing values except `group` (blank for knockouts).
 **Rebuild:** `python build_model21_dataset.py` (reads `raw/`, writes the CSV).
 

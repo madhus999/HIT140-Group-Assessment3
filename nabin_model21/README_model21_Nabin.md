@@ -1,5 +1,7 @@
 # Model 2.1 – Remaining 4 variables + regression (Nabin part)
 
+**Student ID:** s397551 (Nabin Thapa)
+
 Builds on KB's file `../kb_model21/model21_matches_KB.csv` (104 matches, target `goal_diff` at 90 min, 4 variables).
 
 ## How to run

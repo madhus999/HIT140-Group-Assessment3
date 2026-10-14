@@ -1,5 +1,7 @@
 # Model 2.2 – Prabin Shrestha
 
+**Student ID:** s397986 (Prabin Shrestha)
+
 This folder contains the final linear regression for Model 2.2, which predicts `team_goals` (the number of goals a team scores in a single World Cup match at 90 minutes). The model uses the cleaned 208-row dataset created by Suman in `../suman_model22/model22_team_matches.csv` and is estimated in Python with `statsmodels` using cluster-robust standard errors grouped by `match_id`.
 
 ## Model specification
