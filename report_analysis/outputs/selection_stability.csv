@@ -1,0 +1,15 @@
+variable,Model 2.1,Model 2.2
+elo_diff,0.92,0.96
+h2h_score_rate,0.4,
+rest_days_diff,0.24,
+form_gd_diff,0.12,
+host_adv_diff,0.6,
+squad_age_diff,0.36,
+top5_share_diff,0.96,0.96
+wc_exp_diff,0.04,
+host_adv,,0.48
+attack_l10,,0.04
+opp_defence_l10,,0.56
+h2h_goals_pg,,0.2
+elo_change_1y,,0.12
+knockout,,0.12

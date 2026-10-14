@@ -1,0 +1,5 @@
+candidate,variables,cv_rmse,sd
+Mean baseline,-,2.003971648218583,0.0
+Full OLS (8 variables),"elo_diff, h2h_score_rate, rest_days_diff, form_gd_diff, host_adv_diff, squad_age_diff, top5_share_diff, wc_exp_diff",1.632282295956287,0.032364170826276094
+"EDA-screened OLS (|r| >= 0.2, 5 vars)","elo_diff, h2h_score_rate, form_gd_diff, top5_share_diff, wc_exp_diff",1.615376289857957,0.026240885872950002
+Best-subset OLS (4 vars),"elo_diff, h2h_score_rate, host_adv_diff, top5_share_diff",1.5686008976133308,0.025635941782226244

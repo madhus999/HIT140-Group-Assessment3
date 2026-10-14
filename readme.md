@@ -40,7 +40,16 @@ Two linear regression models on FIFA World Cup 2026 data, built in Python.
   - model22_team_matches.csv – output dataset (8 variables + target team_goals)
   - outputs_summary.txt – descriptive stats, correlations, VIF
   - README_model22_Suman.md – data dictionary + notes for Prabin
-- **prabin_model22/** – to be added
+- **prabin_model22/**
+  - model22_regression.py – OLS with cluster-robust errors, diagnostics, grouped-CV model comparison
+  - outputs/ – results, comparison table, 5 figures
+  - README_model22_Prabin.md – results and report notes
+- **report_analysis/**
+  - optimise_models.py – feature selection, Poisson and log models, nested check (both models)
+  - compare_algorithms.py – OLS vs ridge, lasso, random forest, boosting, Poisson under one validation design
+  - report_figures.py – the 4 figures used in the Word report
+  - outputs/ – results and figures
+  - README_report_analysis.md – method and key results
 
 ## How to run
 
@@ -54,6 +63,12 @@ Requires Python 3.10+.
     python3 model21_regression.py
     cd ../suman_model22
     python3 build_model22_dataset.py
+    cd ../prabin_model22
+    python3 model22_regression.py
+    cd ..
+    python3 report_analysis/optimise_models.py
+    python3 report_analysis/compare_algorithms.py
+    python3 report_analysis/report_figures.py
 
 ## Data sources
 

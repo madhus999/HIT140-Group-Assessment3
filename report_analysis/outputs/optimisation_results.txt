@@ -1,0 +1,40 @@
+MODEL 2.1 - goal difference (5-fold CV x20)
+                            candidate                                                                                                           variables  cv_rmse    sd
+                        Mean baseline                                                                                                                   -    2.004 0.000
+               Full OLS (8 variables) elo_diff, h2h_score_rate, rest_days_diff, form_gd_diff, host_adv_diff, squad_age_diff, top5_share_diff, wc_exp_diff    1.632 0.032
+EDA-screened OLS (|r| >= 0.2, 5 vars)                                                elo_diff, h2h_score_rate, form_gd_diff, top5_share_diff, wc_exp_diff    1.615 0.026
+             Best-subset OLS (4 vars)                                                            elo_diff, h2h_score_rate, host_adv_diff, top5_share_diff    1.569 0.026
+Top 5 subsets in the exhaustive search: elo_diff, h2h_score_rate, host_adv_diff, top5_share_diff (1.549); elo_diff, h2h_score_rate, host_adv_diff, squad_age_diff, top5_share_diff (1.551); elo_diff, host_adv_diff, top5_share_diff (1.555); elo_diff, host_adv_diff, squad_age_diff, top5_share_diff (1.556); elo_diff, h2h_score_rate, rest_days_diff, host_adv_diff, top5_share_diff (1.557)
+
+MODEL 2.2 - team goals (grouped 5-fold CV x20)
+                                 candidate                                                                                               variables  cv_rmse    sd
+                    Full OLS (8 variables) elo_diff, top5_share_diff, host_adv, attack_l10, opp_defence_l10, h2h_goals_pg, elo_change_1y, knockout    1.242 0.018
+     EDA-screened OLS (|r| >= 0.2, 5 vars)                                    elo_diff, top5_share_diff, attack_l10, opp_defence_l10, h2h_goals_pg    1.237 0.013
+                  Best-subset OLS (3 vars)                                                                     elo_diff, top5_share_diff, host_adv    1.219 0.010
+Log-transformed OLS, log(goals+1) (8 vars) elo_diff, top5_share_diff, host_adv, attack_l10, opp_defence_l10, h2h_goals_pg, elo_change_1y, knockout    1.251 0.020
+                 Poisson GLM (8 variables) elo_diff, top5_share_diff, host_adv, attack_l10, opp_defence_l10, h2h_goals_pg, elo_change_1y, knockout    1.280 0.021
+         Poisson GLM, best subset (3 vars)                                                                     elo_diff, top5_share_diff, host_adv    1.248 0.013
+Top 5 subsets in the exhaustive search: elo_diff, top5_share_diff, host_adv (1.211); elo_diff, top5_share_diff, host_adv, opp_defence_l10 (1.213); elo_diff, top5_share_diff, host_adv, h2h_goals_pg (1.214); elo_diff, top5_share_diff, host_adv, opp_defence_l10, h2h_goals_pg (1.214); elo_diff, top5_share_diff, host_adv, attack_l10 (1.216)
+
+OPTIMISED MODELS - coefficients with 95% confidence intervals
+Model 2.1 best subset (HC3):
+                   coef  ci_low  ci_high       p
+const           -0.3689 -1.1084   0.3705  0.3282
+elo_diff         0.0031  0.0013   0.0048  0.0006
+h2h_score_rate   0.9880 -0.3751   2.3511  0.1554
+host_adv_diff    0.8147 -0.2639   1.8933  0.1388
+top5_share_diff  1.5988  0.6607   2.5369  0.0008
+R2 = 0.458, adj R2 = 0.436
+Model 2.2 Poisson best subset (cluster-robust), as rate ratios:
+                 rate_ratio  ci_low  ci_high       p
+const                1.2772  1.1148   1.4633  0.0004
+elo_diff             1.0012  1.0006   1.0018  0.0001
+top5_share_diff      1.8067  1.3308   2.4527  0.0001
+host_adv             1.4107  0.9952   1.9996  0.0532
+Deviance explained = 0.245; Pearson chi2/df = 0.95 (near 1 = no overdispersion)
+
+NESTED CHECK - best-subset selection repeated inside each training fold (5 x 5-fold)
+Model 2.1: nested RMSE = 1.627 (sd 0.024) vs full OLS 1.632 -> improvement 0.3%
+  share of outer folds selecting each variable: top5_share_diff 96%, elo_diff 92%, host_adv_diff 60%, h2h_score_rate 40%, squad_age_diff 36%, rest_days_diff 24%, form_gd_diff 12%, wc_exp_diff 4%
+Model 2.2: nested RMSE = 1.238 (sd 0.014) vs full OLS 1.242 -> improvement 0.3%
+  share of outer folds selecting each variable: elo_diff 96%, top5_share_diff 96%, opp_defence_l10 56%, host_adv 48%, h2h_goals_pg 20%, elo_change_1y 12%, knockout 12%, attack_l10 4%

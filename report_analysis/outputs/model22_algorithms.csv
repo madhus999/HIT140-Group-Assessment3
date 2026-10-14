@@ -1,0 +1,8 @@
+,cv_rmse,sd,change_vs_ols_pct
+Ridge (tuned),1.229,0.012,0.714
+OLS (8 variables),1.237,0.012,0.0
+Lasso (tuned),1.24,0.014,-0.238
+Random forest,1.261,0.019,-1.872
+Poisson GLM,1.278,0.013,-3.28
+Gradient boosting,1.358,0.033,-9.718
+Mean baseline,1.389,0.004,-12.239

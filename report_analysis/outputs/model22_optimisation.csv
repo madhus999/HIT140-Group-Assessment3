@@ -1,0 +1,7 @@
+candidate,variables,cv_rmse,sd
+Full OLS (8 variables),"elo_diff, top5_share_diff, host_adv, attack_l10, opp_defence_l10, h2h_goals_pg, elo_change_1y, knockout",1.2417545656556592,0.01829687476312239
+"EDA-screened OLS (|r| >= 0.2, 5 vars)","elo_diff, top5_share_diff, attack_l10, opp_defence_l10, h2h_goals_pg",1.2367233625754899,0.013119753678068327
+Best-subset OLS (3 vars),"elo_diff, top5_share_diff, host_adv",1.2185709947859276,0.010322361958269488
+"Log-transformed OLS, log(goals+1) (8 vars)","elo_diff, top5_share_diff, host_adv, attack_l10, opp_defence_l10, h2h_goals_pg, elo_change_1y, knockout",1.2513201154217544,0.019762467758305955
+Poisson GLM (8 variables),"elo_diff, top5_share_diff, host_adv, attack_l10, opp_defence_l10, h2h_goals_pg, elo_change_1y, knockout",1.2799884139836846,0.02130895297895749
+"Poisson GLM, best subset (3 vars)","elo_diff, top5_share_diff, host_adv",1.2480242380469504,0.012768788270141494
