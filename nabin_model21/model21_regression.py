@@ -17,7 +17,6 @@ Steps
   6. compare linear regression with competing algorithms (ridge, lasso, random forest,
      gradient boosting) using the same cross-validation
 
-Run: python model21_regression.py     -> prints results, saves files to ./outputs
 """
 from pathlib import Path
 

@@ -1,29 +1,18 @@
 """
-HIT140 Assessment 3 - Objective 2 - Linear Regression 2.1
-Part: Nabin - add the remaining 4 pre-match explanatory variables to KB's dataset
+Model 2.1 - Nabin's part
 
-Input : ../kb_model21/model21_matches_KB.csv   (104 matches, target + KB's 4 variables)
-Output: model21_matches_full.csv               (104 matches, target + all 8 variables)
+What this file does:
+Takes KB's file of 104 World Cup matches and adds 4 more pre-match columns,
+then saves everything as model21_matches_full.csv.
 
-The 4 variables added here (all team1 minus team2, same sign convention as KB):
-  5. host_adv_diff     +1 if team1 plays in its own country, -1 if team2 does, else 0
-  6. squad_age_diff    mean squad age (years, at 11 June 2026) of team1 minus team2
-  7. top5_share_diff   share of the 26-man squad playing club football in a top-5
-                       European league country (ENG, ESP, GER, ITA, FRA), team1 minus team2
-  8. wc_exp_diff       number of previous World Cup finals tournaments (1930-2022)
-                       team1 appeared in, minus team2's
+The 4 new columns (team 1 minus team 2):
+  host_adv_diff    - is a team playing in its own country?
+  squad_age_diff   - difference in the average age of the two squads
+  top5_share_diff  - difference in how many players play in the top 5 European leagues
+  wc_exp_diff      - difference in how many World Cups each team has played before
 
-Why each one is known before kick-off:
-  - venues were fixed by FIFA long before the tournament
-  - final squads (dates of birth, clubs) were registered before the opening match
-  - World Cup history only uses tournaments up to 2022
-
-Sources (raw files in ./raw and ../kb_model21/raw):
-  - openfootball/worldcup.json 2026: worldcup.squads.json, worldcup.stadiums.json
-      https://github.com/openfootball/worldcup.json/tree/master/2026
-  - martj42/international_results: results.csv (KB's copy, intl_results.csv)
-
-Run: python build_model21_full_dataset.py
+All 4 are known before the match starts.
+Data comes from openfootball (squads and stadiums) and KB's results file.
 """
 import json
 from pathlib import Path
